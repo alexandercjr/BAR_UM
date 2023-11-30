@@ -10,7 +10,6 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            overflow: hidden; /* Impede a barra de rolagem */
         }
 
         .intro-container {
@@ -23,15 +22,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 2; /* Coloca a tela de introdução acima do conteúdo */
-            animation: fadeOut 5s forwards; /* Animação de fade out com duração de 5 segundos */
+            z-index: 2; 
+            animation: fadeOut 5s forwards; 
         }
 
         .intro-image {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Garante que a imagem cubra completamente a tela mantendo sua proporção */
-            object-position: center; /* Centraliza a imagem na tela */
+            object-fit: cover; 
+            object-position: center; 
         }
 
         .menu-container {
@@ -41,8 +40,8 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
             border-radius: 5px;
-            opacity: 0; /* Inicialmente, o contêiner do cardápio é transparente */
-            animation: fadeIn 2s forwards; /* Animação de fade in com duração de 2 segundos */
+            opacity: 0; 
+            animation: fadeIn 2s forwards;
         }
 
         .menu-image {
@@ -57,7 +56,7 @@
             }
 
             .intro-image {
-                height: auto; /* Ajusta a altura automaticamente para evitar distorção */
+                height: auto;
             }
         }
 
