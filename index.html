@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAR UM ROCK MUSIC BAR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow: hidden; /* Impede a barra de rolagem */
+        }
+
+        .intro-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2; /* Coloca a tela de introdução acima do conteúdo */
+            animation: fadeOut 5s forwards; /* Animação de fade out com duração de 5 segundos */
+        }
+
+        .intro-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garante que a imagem cubra completamente a tela mantendo sua proporção */
+            object-position: center; /* Centraliza a imagem na tela */
+        }
+
+        .menu-container {
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+            opacity: 0; /* Inicialmente, o contêiner do cardápio é transparente */
+            animation: fadeIn 2s forwards; /* Animação de fade in com duração de 2 segundos */
+        }
+
+        .menu-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .menu-container {
+                max-width: 100%;
+            }
+
+            .intro-image {
+                height: auto; /* Ajusta a altura automaticamente para evitar distorção */
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="intro-container">
+        <img src="logo1.png" alt="Introdução" class="intro-image">
+    </div>
+
+    <div class="menu-container">
+        <img src="page2.jpeg" alt="Cardápio do Restaurante" class="menu-image">
+        <img src="page1.jpeg" alt="Cardápio do Restaurante" class="menu-image">
+    </div>
+
+    <script>
+        // Adiciona um atraso para exibir a tela de introdução por 5 segundos
+        setTimeout(function () {
+            // Oculta a tela de introdução
+            document.querySelector('.intro-container').style.display = 'none';
+            // Exibe o contêiner do cardápio
+            document.querySelector('.menu-container').style.opacity = '1';
+        }, 5000); // 5000 milissegundos = 5 segundos
+    </script>
+</body>
+</html>
